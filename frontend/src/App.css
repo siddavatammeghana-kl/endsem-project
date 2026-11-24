@@ -1,0 +1,290 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+.app {
+    min-height: 100vh;
+}
+
+/* HOME PAGE */
+.home-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #0f172a, #1d4ed8);
+    color: white;
+}
+
+.home-page h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.home-page h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.home-page p {
+    margin-bottom: 25px;
+    font-size: 17px;
+}
+
+/* BUTTONS */
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    margin: 8px 5px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* FORMS */
+.form-container {
+    background: white;
+    width: 90%;
+    max-width: 450px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 22px;
+    color: #1e3a8a;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    margin: 10px 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 4px rgba(37, 99, 235, 0.3);
+}
+
+.form-container form button {
+    width: 100%;
+    margin: 12px 0;
+}
+
+/* DASHBOARD */
+.dashboard {
+    max-width: 1200px;
+    margin: auto;
+    padding: 25px;
+}
+
+.dashboard header {
+    background: #0f172a;
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.dashboard header h1 {
+    font-size: 25px;
+}
+
+.dashboard header button {
+    background: #dc2626;
+}
+
+.dashboard header button:hover {
+    background: #b91c1c;
+}
+
+/* BALANCE CARD */
+.balance-card {
+    background: linear-gradient(135deg, #1d4ed8, #0f172a);
+    color: white;
+    padding: 30px;
+    margin: 25px 0;
+    border-radius: 14px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.balance-card h2 {
+    margin-bottom: 15px;
+}
+
+.balance-card h1 {
+    font-size: 36px;
+    margin-bottom: 18px;
+}
+
+.balance-card p {
+    margin: 8px 0;
+}
+
+.balance-card button {
+    background: white;
+    color: #1d4ed8;
+    font-weight: bold;
+}
+
+.balance-card button:hover {
+    background: #dbeafe;
+}
+
+/* TRANSACTION HISTORY */
+.transaction-section {
+    background: white;
+    margin: 25px 0;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    overflow-x: auto;
+}
+
+.transaction-section h2 {
+    margin-bottom: 20px;
+    color: #1e3a8a;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px;
+}
+
+th {
+    background: #1e3a8a;
+    color: white;
+    padding: 14px;
+    text-align: left;
+}
+
+td {
+    padding: 13px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+tr:hover {
+    background: #f1f5f9;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+    .home-page h1 {
+        font-size: 36px;
+    }
+
+    .home-page h2 {
+        font-size: 22px;
+    }
+
+    .dashboard {
+        padding: 12px;
+    }
+
+    .dashboard header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .balance-card h1 {
+        font-size: 28px;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+}
+
+.dashboard-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.dashboard-nav button {
+    background: #2563eb;
+    color: white;
+}
+
+.dashboard-nav button:hover {
+    background: #3b82f6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#account-section,
+#transfer-section,
+#deposit-section,
+#withdraw-section,
+#transaction-section {
+    scroll-margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .dashboard-nav {
+        width: 100%;
+    }
+
+    .dashboard-nav button {
+        flex: 1 1 auto;
+    }
+}
+
+
+#profile-section {
+    line-height: 2;
+}
+
+#profile-section p {
+    padding: 8px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+#profile-section strong {
+    color: #1e3a8a;
+}
+
+#profile-section {
+    scroll-margin-top: 20px;
+}
+
